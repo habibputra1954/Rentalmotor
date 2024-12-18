@@ -1,177 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Owner</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+<title>GASBANTER</title>
+<style>
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-        .container {
-            display: flex;
-            width: 100%;
-            height: 100vh;
-        }
+.header {
+  background-color: #FFC300;
+  color: #222;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
 
-        .sidebar {
-            background-color: #333;
-            color: #fff;
-            width: 200px;
-            padding: 20px;
-        }
+.header h1 {
+  margin: 0;
+}
 
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
+.header img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+}
 
-        .sidebar li {
-            padding: 10px 0;
-            border-bottom: 1px solid #555;
-        }
+.sidebar {
+  background-color: #333;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
 
-        .sidebar a {
-            text-decoration: none;
-            color: #fff;
-        }
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
 
-        .sidebar a:hover {
-            color: #ccc;
-        }
+.sidebar a:hover {
+  background-color: #555;
+}
 
-        .content {
-            background-color: #fff;
-            padding: 20px;
-            flex: 1;
-        }
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
 
-        .header {
-            background-color: #ffc107;
-            color: #fff;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
 
-        .header h2 {
-            margin: 0;
-        }
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #fff;
+}
 
-        .header .dropdown {
-            position: relative;
-        }
+th {
+  background-color: #555;
+}
 
-        .header .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
+.user-info {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+}
 
-        .header .dropdown-content a {
-            display: block;
-             padding: 10px;
-            text-decoration: none;
-            color: black;
-        }
-
-        .header .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .header .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .form-container {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-
-        .btn-save {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .btn-cancel {
-            background-color: #f44336;
-            color: white;
-        }
-    </style>
+.user-info a {
+  text-decoration: none;
+  color: #fff;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Sewa</a></li>
-                <li><a href="#">Motor</a></li>
-                <li><a href="#">Owner</a></li>
-                <li><a href="#">Laporan</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="header">
-                <h2>Tambah Owner</h2>
-                <div class="dropdown">
-                    <button>Menu</button>
-                    <div class="dropdown-content">
-                        <a href="#">Profile</a>
-                        <a href="#">Settings</a>
-                        <a href="#">Logout</a>
-                    </div>
-                </div>
-            </div>
-            <div class="form-container">
-                <div class="form-group">
-                    <label class="form-label" for="ownerName">Nama Owner</label>
-                    <input class="form-input" type="text" id="ownerName" placeholder="Masukkan nama owner">
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="ownerEmail">Email Owner</label>
-                    <input class="form-input" type="email" id="ownerEmail" placeholder="Masukkan email owner">
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="ownerPhone">Telepon Owner</label>
-                    <input class="form-input" type="tel" id="ownerPhone" placeholder="Masukkan telepon owner">
-                </div>
-                <button class="btn btn-save">Simpan</button>
-                <button class="btn btn-cancel">Batal</button>
-            </div>
-        </div>
-    </div>
+
+<div class="header">
+   <h1>GASBANTER</h1>
+   <img src="logo.png" alt="GASBANTER Logo">
+</div>
+
+<div class="sidebar">
+   <a href="#Settings">#Settings</a>
+   <a href="#Tambahkan kendaraan">Tambahkan kendaraan</a>
+   <a href="#Profil PT">Profil PT</a>
+   <a href="#Menu">Menu></a>
+   <a href="#Pemesanan Kendaraan">Pemesanan Kendaraan</a>
+   <a href="#Home">Home</a>
+</div>
+
+<div class="content">
+   <h2>Customer Information</h2>
+   <table>
+      <tr>
+         <th>Customer</th>
+         <th>ID</th>
+         <th>Kendaraan</th>
+         <th>Plat Nomor</th>
+      </tr>
+      <tr>
+         <td>Syarif udin</td>
+         <td>12</td>
+         <td>Megapro</td>
+         <td>E 1423 PP</td>
+      </tr>
+      <tr>
+         <td>Bagong nur</td>
+         <td>03</td>
+         <td>Vario</td>
+         <td>E 1423 PP</td>
+      </tr>
+   </table>
+</div>
+
+<div class="user-info">
+   <a href="#profile">Profile</a>
+   <a href="#logout">Logout</a>
+</div>
+
 </body>
 </html>
