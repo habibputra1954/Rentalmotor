@@ -1,62 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-body {
-  background-color: #333;
-  color: white;
-  font-family: sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Owner</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-.container {
-  width: 300px;
-  margin: 100px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-}
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            padding: 20px;
+        }
 
-input[type="text"], input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
+        .sidebar li {
+            padding: 10px 0;
+            border-bottom: 1px solid #555;
+        }
 
-button:hover {
-  opacity: 0.9;
-}
-</style>
+        .sidebar a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .sidebar a:hover {
+            color: #ccc;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .header {
+            background-color: #ffc107;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h2 {
+            margin: 0;
+        }
+
+        .header .dropdown {
+            position: relative;
+        }
+
+        .header .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .header .dropdown-content a {
+            display: block;
+             padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .header .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .header .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .btn-save {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-cancel {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
 </head>
-<body>s
-
-<div class="container">
-  <h2>LOGIN USER</h2>
-  <form>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    <button type="submit">LOGIN</button>
-  </form>
-</div>
-
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Sewa</a></li>
+                <li><a href="#">Motor</a></li>
+                <li><a href="#">Owner</a></li>
+                <li><a href="#">Laporan</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h2>Tambah Owner</h2>
+                <div class="dropdown">
+                    <button>Menu</button>
+                    <div class="dropdown-content">
+                        <a href="#">Profile</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="form-group">
+                    <label class="form-label" for="ownerName">Nama Owner</label>
+                    <input class="form-input" type="text" id="ownerName" placeholder="Masukkan nama owner">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="ownerEmail">Email Owner</label>
+                    <input class="form-input" type="email" id="ownerEmail" placeholder="Masukkan email owner">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="ownerPhone">Telepon Owner</label>
+                    <input class="form-input" type="tel" id="ownerPhone" placeholder="Masukkan telepon owner">
+                </div>
+                <button class="btn btn-save">Simpan</button>
+                <button class="btn btn-cancel">Batal</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
