@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kendaraan</title>
+    <style>
+        /* Reset default styles */
+        body, h1, h2, ul, li, p, form {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar {
+            background-color: #444;
+            color: #fff;
+            width: 220px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .sidebar .logo {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .sidebar .logo .gas {
+            color: #f2c700;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar nav ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar nav ul li a:hover,
+        .sidebar nav ul li a.active {
+            color: #f2c700;
+        }
+
+        .main-content {
+            flex: 1;
+            background-color: #1f1f1f;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f2c700;
+            padding: 15px;
+            color: #444;
+            font-weight: bold;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        header .company-name {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-tambah {
+            background-color: #222;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-group label {
+            color: #fff;
+            font-size: 16px;
+            flex: 0 0 20%;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="file"] {
+            flex: 0 0 75%;
+            padding: 10px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="logo"><span class="gas">GAS</span>BANTER</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#" class="active">Tambah Kendaraan</a></li>
+                    <li><a href="#">Profil PT</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Pemesanan Kendaraan</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Tambah Kendaraan</h1>
+                <span class="company-name">PT. Rantouyee &#128100;</span>
+            </header>
+
+            <form class="form-tambah">
+                <div class="form-group">
+                    <label for="metek">Metek dan Type:</label>
+                    <input type="text" id="metek">
+                </div>
+
+                <div class="form-group">
+                    <label for="plat">Plat Nomor:</label>
+                    <input type="text" id="plat">
+                </div>
+
+                <div class="form-group">
+                    <label for="tahun">Tahun Kendaraan:</label>
+                    <input type="text" id="tahun">
+                </div>
+
+                <div class="form-group">
+                    <label for="harga">Harga:</label>
+                    <input type="text" id="harga">
+                </div>
+
+                <div class="form-group">
+                    <label for="owner">ID Owner:</label>
+                    <input type="text" id="owner">
+                </div>
+
+                <div class="form-group">
+                    <label for="gambar">Gambar:</label>
+                    <input type="file" id="gambar">
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
